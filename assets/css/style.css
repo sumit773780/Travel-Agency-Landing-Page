@@ -74,8 +74,8 @@ header {
 }
 
 .logo img {
-    width: 114.91px;
-    height: 33.99px;
+    max-width: 114.91px;
+
 }
 
 .navlist nav {
@@ -141,9 +141,9 @@ nav select {
     background: url(./../image/Decore.svg) no-repeat;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: -40%;
     width: 150%;
-    height: 7px;
+    height: 17px;
     background-size: contain;
     z-index: -1;
 }
@@ -308,22 +308,34 @@ nav select {
 .maps {
     margin-top: 60px;
     justify-content: center;
+    gap: 35px;
+
 }
 
 .city {
-    justify-content: center;
+    width: 100%;
     text-align: center;
+    position: relative;
+    filter: drop-shadow(0px 1.85px 3.15px #00000001) drop-shadow(0px 8.15px 6.52px #00000002) drop-shadow(0px 20px 13px #00000003) drop-shadow(0px 38.52px 25.48px #00000003) drop-shadow(0px 64.81px 46.85px #00000004) drop-shadow(0px 100px 80px #00000005);
+
 }
 
-.city img {
-    width: 317px;
-    height: 457px;
+.city>img {
+    width: 100%;
 }
 
 .plans {
-    width: 315px;
-    height: 130px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background: var(--white-color);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--paragraph-color);
+    padding: 27px 20px 42px;
+    border-radius: 0 0 24px 24px;
 
 }
 
@@ -332,36 +344,53 @@ nav select {
     height: auto;
 }
 
-/* Easy-And-Fast */
-
-.easyandfast{
-    margin-top: 186px;
-    margin-bottom: 200px;
+.days {
+    text-align: left;
+    margin-top: 19px;
 }
 
-.leftpannel strong{
+
+/* Easy-And-Fast */
+
+.easyandfast {
+    margin-top: 186px;
+    margin-bottom: 200px;
+    align-items: start;
+}
+
+.leftpannel strong {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 18px;
     color: var(--paragraph-color);
 }
 
-.leftpannel h2{
+.leftpannel h2 {
     font-family: var(--header-font-family);
     font-size: 50px;
     font-weight: 700;
-    color:var(--h2-color);
+    color: var(--h2-color);
     max-width: 500px;
+    padding-bottom: 31px;
 }
 
-.rule h3{
+.rule {
+    padding-bottom: 48px;
+}
+
+.rule img {
+    height: 48px;
+    padding-right: 21px;
+}
+
+.rule h3 {
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
     color: var(--paragraph-color);
 }
 
-.rule p{
+.rule p {
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 400;
@@ -369,63 +398,117 @@ nav select {
     max-width: 400px;
 }
 
-
 .rightpannel {
-    width: 371px;
-    height: 400px;
+    width: 40%;
+    position: relative;
+    padding-right: 7%;
+}
+
+.rightpannel::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    background: url(./../image/backgroundimag.png) no-repeat;
+    background-size: contain;
+}
+
+.lowercard {
     padding-left: 25px;
     margin-top: 26px;
+    position: relative;
     background-color: var(--white-color);
     border-radius: 26px;
     transition: transform 0.3s ease-in-out;
 }
 
-.rightpannel:hover {
-    transform: scale(1.1);
-    box-shadow:40px 5px 30px 5px rgb(89, 177, 230);
-}
 
-.rightpannel img{
+.lowercard img {
     padding-top: 20px;
     padding-right: 24px;
     padding-bottom: 12px;
 }
 
-.rightpannel h3{
+.lowercard h3 {
     padding-bottom: 6px;
     font-family: var(--font-family);
     font-size: 18px;
     font-weight: 500;
     color: #080809;
 }
-.rightpannel p{
+
+.rightpannel p {
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 400;
-    color: #84829A;   
+    color: #84829A;
 }
 
-.goingpeople span{
+.goingpeople span {
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 400;
-    color:#84829A;
-} 
+    color: #84829A;
+    padding-right: 140px;
+}
+
+.uppercard {
+    position: absolute;
+    bottom: 11%;
+    left: 46%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 18px;
+    filter: drop-shadow(0px 1.85px 3.15px #00000001) drop-shadow(0px 8.15px 6.52px #00000002) drop-shadow(0px 20px 13px #00000003) drop-shadow(0px 38.52px 25.48px 0px #00000003) drop-shadow(0px 64.81px 46.85px #00000004) drop-shadow(0px 100px 80px #00000005);
+    background-color: var(--white-color);
+    align-items: start;
+    gap: 12px;
+}
+
+.uppercard img {
+    min-width: 50px;
+
+}
+
+.Ongoing span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #84829A;
+    gap: 10px;
+}
+
+.Ongoing h3 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #080809;
+
+}
+
+.percent span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #8A79DF;
+}
 
 /* TEstimoniols  */
 
-.Testimonial{
+.Testimonial {
     margin-bottom: 96px;
 }
 
-.left strong{
+.left strong {
     font-family: var(--font-family);
     font-size: 18px;
     font-weight: 600;
     color: var(--paragraph-color);
 }
 
-.left h2{
+.left h2 {
     font-family: var(--header-font-family);
     font-size: 50px;
     font-weight: 700;
@@ -433,7 +516,7 @@ nav select {
     max-width: 400px;
 }
 
-.right p{
+.right p {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 18px;
@@ -442,7 +525,7 @@ nav select {
 
 }
 
-.right h3{
+.right h3 {
     padding-top: 34px;
     font-family: var(--font-family);
     font-size: 18px;
@@ -450,13 +533,14 @@ nav select {
     color: var(--paragraph-color);
 }
 
-.right span{
+.right span {
     padding-top: 5px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
     color: var(--paragraph-color);
 }
+
 /* aeroplans names  */
 
 .names {
@@ -473,32 +557,51 @@ nav select {
 
 /* textarea */
 
-.textarea{
+.feedback .container {
+    position: relative;
+    isolation: isolate;
+}
+
+.feedback .container>img:nth-of-type(1) {
+    position: absolute;
+    opacity: .2;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+}
+
+.feedback .container>img:nth-of-type(2) {
+    position: absolute;
+    left: auto;
+    bottom: auto;
+    opacity: .2;
+    z-index: -1;
+    top: 13%;
+    right: 0;
+    translate: 15%;
+    max-width:300px;
+    rotate: -90deg;
+}
+
+.feedback .container>img:nth-of-type(3) {
+    left: 97%;
+    bottom: 90%;
+    position: absolute;
+}
+
+
+.textarea {
     width: 1170px;
     height: 407px;
     margin-top: 120px;
     margin-bottom: 170px;
-    background-color: #DFD7F9;
+    background-color: #dfd7f959;
     border-radius: 129px 20px 20px 20px;
     text-align: center;
+
 }
 
-/* .textarea{
-    background: url(./../image/backemalimg.png) no-repeat;
-    position: relative;
-    z-index: 1;
-    margin-left: 20px;
-    margin-top: 131px;
-} */
-
-/* .textarea img{
-    position: relative;
-    padding-left: 1207px;
-    top: auto;
-    left: auto;
-} */
-
-.textarea h2{
+.textarea h2 {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 34px;
@@ -507,23 +610,23 @@ nav select {
     padding: 70px 156px;
 }
 
-#email{
+#email {
     width: 400px;
     height: 68px;
     margin-right: 24px;
-    border-radius: 10px ;
-    border:1px solid var(--white-color);
+    border-radius: 10px;
+    border: 1px solid var(--white-color);
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-#email:hover{
+#email:hover {
     transform: scale(1.2);
-    box-shadow:0 15px 15px rgb(6, 11, 6);
+    box-shadow: 0 15px 15px rgb(6, 11, 6);
 
 }
 
-.your-email button{
+.your-email button {
     width: 180px;
     height: 68px;
     color: var(--white-color);
@@ -533,9 +636,9 @@ nav select {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.your-email button:hover{
+.your-email button:hover {
     transform: scale(1.2);
-    box-shadow:0 15px 15px rgb(12, 139, 0);
+    box-shadow: 0 15px 15px rgb(12, 139, 0);
 }
 
 
@@ -547,8 +650,6 @@ nav select {
     font-family: var(--font-family);
     font-weight: 400;
     color: #181E4B;
-   
-
 }
 
 .jadoo p {
@@ -592,4 +693,176 @@ nav select {
     color: var(--paragraph-color);
     font-weight: 400;
     font-size: 14px;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .leftcontent h1,
+    .heading h2,
+    .header h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 1366px) {
+
+    .leftcontent h1,
+    .heading h2,
+    .header h2 {
+        font-size: 38px;
+    }
+
+    .rightpannel {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .rightpannel {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .leftpannel h2 {
+        font-size: 38px;
+    }
+
+    .textarea {
+        width: 90%;
+        height: auto;
+        padding: 40px 20px;
+        border-radius: 50px;
+    }
+
+    #email {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .your-email button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .logo {
+        text-align: center;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    header .container {
+        justify-content: center;
+    }
+
+    .banner .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .rightcontent {
+        max-width: 700px;
+    }
+
+    .leftcontent {
+        text-align: center;
+    }
+
+    .service-item {
+        flex-wrap: wrap;
+    }
+
+    .service {
+        width: 40%;
+        flex-grow: 1;
+    }
+
+    .service p {
+        margin-inline: auto;
+    }
+
+
+    .textarea h2 {
+        padding: 20px;
+    }
+
+    .easyandfast {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .feedback .container>img:nth-of-type(2){
+        top: 13%;
+        right: 11%;
+
+    }
+
+    .feedback .container>img:nth-of-type(3) {
+        bottom: 90%;
+        left: 84%;
+
+    }
+
+
+}
+
+@media (max-width: 420px) {
+
+    .leftcontent h1,
+    .heading h2,
+    .header h2 {
+        font-size: 30px;
+    }
+
+    .leftcontent strong {
+        font-size: 16px;
+    }
+
+    .btn button {
+        width: 100%;
+    }
+
+    .feedback .container>img:nth-of-type(2),
+    .feedback .container>img:nth-of-type(1),
+    .feedback .container>img:nth-of-type(3) {
+        display: none;
+    }
+
+    .textarea {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .jadoo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .leftcontent h1 {
+        font-size: 26px;
+    }
+
+    .rightcontent img {
+        max-width: 100%;
+    }
+
+    .textarea h2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .btn button,
+    .your-email button,
+    #email {
+        width: 100%;
+    }
 }
