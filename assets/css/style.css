@@ -426,9 +426,9 @@ nav select {
 
 
 .lowercard img {
-    padding-top: 20px;
-    padding-right: 24px;
-    padding-bottom: 12px;
+    margin-top: 20px;
+    margin-right: 24px;
+    margin-bottom: 12px;
 }
 
 .lowercard h3 {
@@ -458,7 +458,6 @@ nav select {
     position: absolute;
     bottom: 11%;
     left: 46%;
-    width: 100%;
     padding: 10px;
     border-radius: 18px;
     filter: drop-shadow(0px 1.85px 3.15px #00000001) drop-shadow(0px 8.15px 6.52px #00000002) drop-shadow(0px 20px 13px #00000003) drop-shadow(0px 38.52px 25.48px 0px #00000003) drop-shadow(0px 64.81px 46.85px #00000004) drop-shadow(0px 100px 80px #00000005);
@@ -499,7 +498,19 @@ nav select {
 
 .Testimonial {
     margin-bottom: 96px;
+    border: #000;
+    filter: drop-shadow(0px 1.85px 3.15px #00000001) drop-shadow(0px 8.15px 6.52px #00000002) drop-shadow(0px 20px 13px #00000003) drop-shadow(0px 38.52px 25.48px 0px #00000003) drop-shadow(0px 64.81px 46.85px #00000004) drop-shadow(0px 100px 80px #00000005);
+
 }
+
+.right{
+    padding: 20px 20px;
+    border:2px solid rgba(115, 109, 109, 0.842);
+    border-radius: 5px;
+    filter: drop-shadow(0px 1.85px 3.15px #00000001) drop-shadow(0px 8.15px 6.52px #00000002) drop-shadow(0px 20px 13px #00000003) drop-shadow(0px 38.52px 25.48px 0px #00000003) drop-shadow(0px 64.81px 46.85px #00000004) drop-shadow(0px 100px 80px #00000005);
+
+}
+
 
 .left strong {
     font-family: var(--font-family);
@@ -558,11 +569,10 @@ nav select {
 /* textarea */
 
 .feedback .container {
-    position: relative;
     isolation: isolate;
 }
 
-.feedback .container>img:nth-of-type(1) {
+.feedback .container img:nth-of-type(1) {
     position: absolute;
     opacity: .2;
     z-index: -1;
@@ -570,7 +580,7 @@ nav select {
     bottom: 0;
 }
 
-.feedback .container>img:nth-of-type(2) {
+.feedback .container img:nth-of-type(2) {
     position: absolute;
     left: auto;
     bottom: auto;
@@ -583,7 +593,7 @@ nav select {
     rotate: -90deg;
 }
 
-.feedback .container>img:nth-of-type(3) {
+.feedback .container img:nth-of-type(3) {
     left: 97%;
     bottom: 90%;
     position: absolute;
@@ -594,6 +604,7 @@ nav select {
     width: 1170px;
     height: 407px;
     margin-top: 120px;
+    position: relative;
     margin-bottom: 170px;
     background-color: #dfd7f959;
     border-radius: 129px 20px 20px 20px;
@@ -620,11 +631,6 @@ nav select {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-#email:hover {
-    transform: scale(1.2);
-    box-shadow: 0 15px 15px rgb(6, 11, 6);
-
-}
 
 .your-email button {
     width: 180px;
@@ -634,11 +640,6 @@ nav select {
     border-radius: 10px;
     border: 1px solid #FF946D;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.your-email button:hover {
-    transform: scale(1.2);
-    box-shadow: 0 15px 15px rgb(12, 139, 0);
 }
 
 
@@ -695,6 +696,11 @@ nav select {
     font-size: 14px;
 }
 
+.icon{
+    padding-top: 16px;
+    gap: 7px;
+}
+
 @media (max-width: 1440px) {
     .container {
         max-width: 95%;
@@ -705,6 +711,10 @@ nav select {
     .header h2 {
         font-size: 42px;
     }
+    .feedback{
+        overflow: hidden;
+    }
+
 }
 
 @media (max-width: 1366px) {
@@ -717,6 +727,9 @@ nav select {
 
     .rightpannel {
         width: 45%;
+    }
+    .feedback{
+        overflow: hidden;
     }
 }
 
@@ -745,7 +758,13 @@ nav select {
 
     .your-email button {
         width: 100%;
+        overflow: hidden;
     }
+    .feedback{
+        overflow: hidden;
+    }
+
+
 }
 
 @media (max-width: 991px) {
@@ -765,6 +784,14 @@ nav select {
     .banner .container {
         flex-direction: column-reverse;
         align-items: center;
+    }
+
+    .maps{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .city{
+        width: 40%;
     }
 
     .rightcontent {
@@ -788,30 +815,71 @@ nav select {
         margin-inline: auto;
     }
 
+    .easyandfast{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Testimonial{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .uppercard{
+        position: relative;
+        max-width: 245px;
+    }
+
+    .names{
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
 
     .textarea h2 {
         padding: 20px;
     }
 
-    .easyandfast {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-    .feedback .container>img:nth-of-type(2){
-        top: 13%;
-        right: 11%;
 
+    .feedback{
+        overflow: hidden;
     }
 
-    .feedback .container>img:nth-of-type(3) {
-        bottom: 90%;
-        left: 84%;
-
+    .jadoo{
+        flex-direction: column;
+        align-items: center;
+    
     }
-
 
 }
 
+@media (max-width: 575px){
+    .tags{
+        flex-direction: column;
+    }
+    .maps{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plans h3{
+        font-size: 16px;
+    }
+
+    .city{
+        width: 100%;
+    }
+    .rightpannel::before {
+        left: 15%;
+    }
+
+    .uppercard{
+        max-width: 245px;
+    }
+
+
+ 
+
+}
 @media (max-width: 420px) {
 
     .leftcontent h1,
@@ -827,6 +895,12 @@ nav select {
     .btn button {
         width: 100%;
     }
+    .rightpannel{
+        display: flex;
+        flex-direction: column;
+    }
+
+
 
     .feedback .container>img:nth-of-type(2),
     .feedback .container>img:nth-of-type(1),
